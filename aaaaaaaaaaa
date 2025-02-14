@@ -1,0 +1,59 @@
+-- Script start
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ExecuteButton = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local CodeInput = Instance.new("TextBox")
+local GreenDot = Instance.new("Frame")
+
+-- Parent the GUI elements
+ScreenGui.Parent = game.CoreGui
+Frame.Parent = ScreenGui
+ExecuteButton.Parent = Frame
+Title.Parent = Frame
+CodeInput.Parent = Frame
+GreenDot.Parent = Frame
+
+-- Frame properties
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.Position = UDim2.new(0.5, -200, 0.5, -200)
+Frame.Size = UDim2.new(0, 400, 0, 400)
+Frame.Active = true
+Frame.Draggable = true
+
+-- Button properties
+ExecuteButton.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+ExecuteButton.Position = UDim2.new(0, 10, 1, -40)
+ExecuteButton.Size = UDim2.new(0, 100, 0, 30)
+ExecuteButton.Text = "execute"
+ExecuteButton.TextColor3 = Color3.new(1, 1, 1)
+
+-- Title properties
+Title.BackgroundTransparency = 1
+Title.Position = UDim2.new(0, 10, 0, 10)
+Title.Size = UDim2.new(0, 200, 0, 30)
+Title.Text = "wormscriptzz executor"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextScaled = true
+
+-- CodeInput properties
+CodeInput.BackgroundColor3 = Color3.new(1, 1, 1)
+CodeInput.Position = UDim2.new(0.5, -150, 0.5, -50)
+CodeInput.Size = UDim2.new(0, 300, 0, 100)
+CodeInput.Text = ""
+CodeInput.TextWrapped = true
+
+-- GreenDot properties
+GreenDot.BackgroundColor3 = Color3.new(0, 1, 0)
+GreenDot.Position = UDim2.new(1, -20, 0, 10)
+GreenDot.Size = UDim2.new(0, 10, 0, 10)
+GreenDot.AnchorPoint = Vector2.new(1, 0)
+GreenDot.BorderSizePixel = 0
+
+-- Script functionality
+ExecuteButton.MouseButton1Click:Connect(function()
+    print("Execute button clicked!")
+    -- Voeg hier je script toe dat moet worden uitgevoerd wanneer op de knop wordt geklikt
+end)
+
+-- Script end
