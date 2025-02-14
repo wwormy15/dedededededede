@@ -1,0 +1,92 @@
+-- Script start
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ExecuteButton = Instance.new("TextButton")
+local InjectButton = Instance.new("TextButton")
+local AdminPanelButton = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local CodeInput = Instance.new("TextBox")
+local RedDot = Instance.new("Frame")
+local Notification = Instance.new("TextLabel")
+local InjectedStatus = Instance.new("TextLabel")
+local PasswordPrompt = Instance.new("Frame")
+local PasswordLabel = Instance.new("TextLabel")
+local PasswordInput = Instance.new("TextBox")
+local SubmitButton = Instance.new("TextButton")
+local AdminPanel = Instance.new("Frame")
+local AdminButton = Instance.new("TextButton")
+
+-- Parent the GUI elements
+ScreenGui.Parent = game.CoreGui
+Frame.Parent = ScreenGui
+ExecuteButton.Parent = Frame
+InjectButton.Parent = Frame
+AdminPanelButton.Parent = Frame
+Title.Parent = Frame
+CodeInput.Parent = Frame
+RedDot.Parent = Frame
+Notification.Parent = ScreenGui
+InjectedStatus.Parent = Frame
+PasswordPrompt.Parent = ScreenGui
+PasswordLabel.Parent = PasswordPrompt
+PasswordInput.Parent = PasswordPrompt
+SubmitButton.Parent = PasswordPrompt
+AdminPanel.Parent = ScreenGui
+AdminButton.Parent = AdminPanel
+
+-- Frame properties
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Position = UDim2.new(0.5, -200, 0.5, -200)
+Frame.Size = UDim2.new(0, 400, 0, 400)
+Frame.Active = true
+Frame.Draggable = true
+Frame.BorderSizePixel = 0
+Frame.BackgroundTransparency = 0.1
+Frame.ClipsDescendants = true
+local FrameCorner = Instance.new("UICorner", Frame)
+FrameCorner.CornerRadius = UDim.new(0, 15)
+
+-- Button properties
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(76, 175, 80)
+ExecuteButton.Position = UDim2.new(0, 10, 1, -40)
+ExecuteButton.Size = UDim2.new(0, 100, 0, 30)
+ExecuteButton.Text = "execute"
+ExecuteButton.TextColor3 = Color3.new(1, 1, 1)
+ExecuteButton.BorderSizePixel = 0
+local ExecuteButtonCorner = Instance.new("UICorner", ExecuteButton)
+ExecuteButtonCorner.CornerRadius = UDim.new(0, 15)
+
+InjectButton.BackgroundColor3 = Color3.fromRGB(76, 175, 80)
+InjectButton.Position = UDim2.new(1, -110, 1, -40)
+InjectButton.Size = UDim2.new(0, 100, 0, 30)
+InjectButton.Text = "inject"
+InjectButton.TextColor3 = Color3.new(1, 1, 1)
+InjectButton.BorderSizePixel = 0
+local InjectButtonCorner = Instance.new("UICorner", InjectButton)
+InjectButtonCorner.CornerRadius = UDim.new(0, 15)
+
+AdminPanelButton.BackgroundColor3 = Color3.fromRGB(76, 175, 80)
+AdminPanelButton.Position = UDim2.new(0.5, -75, 0.5, -15)
+AdminPanelButton.Size = UDim2.new(0, 150, 0, 30)
+AdminPanelButton.Text = "wormscriptzz admin panel"
+AdminPanelButton.TextColor3 = Color3.new(1, 1, 1)
+AdminPanelButton.BorderSizePixel = 0
+local AdminPanelButtonCorner = Instance.new("UICorner", AdminPanelButton)
+AdminPanelButtonCorner.CornerRadius = UDim.new(0, 15)
+
+-- Title properties
+Title.BackgroundTransparency = 1
+Title.Position = UDim2.new(0, 10, 0, 10)
+Title.Size = UDim2.new(0, 200, 0, 30)
+Title.Text = "wormscriptzz executor"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextScaled = true
+Title.Font = Enum.Font.GothamBold
+
+-- CodeInput properties
+CodeInput.BackgroundColor3 = Color3.new(0, 0, 0)
+CodeInput.Position = UDim2.new(0.5, -150, 0.5, -50)
+CodeInput.Size = UDim2.new(0, 300, 0, 100)
+CodeInput.Text = ""
+CodeInput.TextWrapped = true
+CodeInput.TextColor3 = Color3.new(1,
