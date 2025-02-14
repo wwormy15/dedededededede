@@ -1,0 +1,106 @@
+-- Script start
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ExecuteButton = Instance.new("TextButton")
+local InjectButton = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local CodeInput = Instance.new("TextBox")
+local RedDot = Instance.new("Frame")
+local Notification = Instance.new("TextLabel")
+
+-- Parent the GUI elements
+ScreenGui.Parent = game.CoreGui
+Frame.Parent = ScreenGui
+ExecuteButton.Parent = Frame
+InjectButton.Parent = Frame
+Title.Parent = Frame
+CodeInput.Parent = Frame
+RedDot.Parent = Frame
+Notification.Parent = ScreenGui
+
+-- Frame properties
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Position = UDim2.new(0.5, -200, 0.5, -200)
+Frame.Size = UDim2.new(0, 400, 0, 400)
+Frame.Active = true
+Frame.Draggable = true
+Frame.BorderSizePixel = 0
+Frame.BackgroundTransparency = 0.1
+Frame.ClipsDescendants = true
+local FrameCorner = Instance.new("UICorner", Frame)
+FrameCorner.CornerRadius = UDim.new(0, 15)
+
+-- Button properties
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(76, 175, 80)
+ExecuteButton.Position = UDim2.new(0, 10, 1, -40)
+ExecuteButton.Size = UDim2.new(0, 100, 0, 30)
+ExecuteButton.Text = "execute"
+ExecuteButton.TextColor3 = Color3.new(1, 1, 1)
+ExecuteButton.BorderSizePixel = 0
+local ExecuteButtonCorner = Instance.new("UICorner", ExecuteButton)
+ExecuteButtonCorner.CornerRadius = UDim.new(0, 15)
+
+InjectButton.BackgroundColor3 = Color3.fromRGB(76, 175, 80)
+InjectButton.Position = UDim2.new(1, -110, 1, -40)
+InjectButton.Size = UDim2.new(0, 100, 0, 30)
+InjectButton.Text = "inject"
+InjectButton.TextColor3 = Color3.new(1, 1, 1)
+InjectButton.BorderSizePixel = 0
+local InjectButtonCorner = Instance.new("UICorner", InjectButton)
+InjectButtonCorner.CornerRadius = UDim.new(0, 15)
+
+-- Title properties
+Title.BackgroundTransparency = 1
+Title.Position = UDim2.new(0, 10, 0, 10)
+Title.Size = UDim2.new(0, 200, 0, 30)
+Title.Text = "wormscriptzz executor"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextScaled = true
+Title.Font = Enum.Font.GothamBold
+
+-- CodeInput properties
+CodeInput.BackgroundColor3 = Color3.new(1, 1, 1)
+CodeInput.Position = UDim2.new(0.5, -150, 0.5, -50)
+CodeInput.Size = UDim2.new(0, 300, 0, 100)
+CodeInput.Text = ""
+CodeInput.TextWrapped = true
+CodeInput.TextColor3 = Color3.new(0, 0, 0)
+CodeInput.Font = Enum.Font.Gotham
+CodeInput.BorderSizePixel = 0
+local CodeInputCorner = Instance.new("UICorner", CodeInput)
+CodeInputCorner.CornerRadius = UDim.new(0, 15)
+
+-- RedDot properties
+RedDot.BackgroundColor3 = Color3.new(1, 0, 0)
+RedDot.Position = UDim2.new(1, -20, 0, 10)
+RedDot.Size = UDim2.new(0, 10, 0, 10)
+RedDot.AnchorPoint = Vector2.new(1, 0)
+RedDot.BorderSizePixel = 0
+local RedDotCorner = Instance.new("UICorner", RedDot)
+RedDotCorner.CornerRadius = UDim.new(0, 5)
+
+-- Notification properties
+Notification.BackgroundTransparency = 1
+Notification.Position = UDim2.new(0.5, -75, 0.5, -25)
+Notification.Size = UDim2.new(0, 150, 0, 50)
+Notification.Text = ""
+Notification.TextColor3 = Color3.new(1, 1, 1)
+Notification.TextScaled = true
+Notification.Font = Enum.Font.GothamBold
+Notification.Visible = false
+
+-- Script functionality
+InjectButton.MouseButton1Click:Connect(function()
+    Notification.Text = "Injected!"
+    Notification.Visible = true
+    wait(3)
+    Notification.Visible = false
+    RedDot.BackgroundColor3 = Color3.new(0, 1, 0)
+end)
+
+ExecuteButton.MouseButton1Click:Connect(function()
+    print("Execute button clicked!")
+    -- Voeg hier je script toe dat moet worden uitgevoerd wanneer op de knop wordt geklikt
+end)
+
+-- Script end
